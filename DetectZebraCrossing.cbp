@@ -13,7 +13,14 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="cv/include" />
+					<Add directory="cv/include/opencv" />
+					<Add directory="cv/include/opencv2" />
 				</Compiler>
+				<Linker>
+					<Add library="cv/lib/libopencv_world.so" />
+					<Add directory="cv/lib" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/DetectZebraCrossing" prefix_auto="1" extension_auto="1" />
